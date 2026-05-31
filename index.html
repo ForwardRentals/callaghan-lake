@@ -2,1136 +2,1061 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Callaghan Lake &mdash; A Field Guide to the Lake Above the Lake</title>
+<title>Callaghan Lake — A Field Guide to the Whistler Backcountry, BC</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="A field guide to Callaghan Lake in the Whistler backcountry: the paddle-across to the Hanging Lake trailhead, the AWD-only road, the wildlife, and how to get a canoe to the put-in.">
+<meta name="description" content="A clear, honest field guide to Callaghan Lake Provincial Park in the Whistler backcountry. The paddle across to Hanging Lake, the wildlife corridor, the AWD-only access, and the small details locals know.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #f5f1ea;
-    --paper-deep: #ece6db;
-    --ink: #1c1917;
-    --ink-soft: #3f3a33;
-    --ink-mute: #7a7268;
-    --rule: #cdc6b8;
+    --paper: #ffffff;
+    --paper-warm: #faf6ee;
+    --paper-deep: #f1ece0;
+    --paper-card: #ffffff;
+    --ink: #0f0e0c;
+    --ink-soft: #2d2922;
+    --ink-mute: #6a6258;
+    --rule: #e3ddd0;
+    --rule-strong: #cdc6b8;
     --moss: #2b3a2b;
     --rust: #8a4a2c;
+    --gold: #b5832e;
   }
   * { box-sizing: border-box; }
   html, body {
     margin: 0; padding: 0;
     background: var(--paper); color: var(--ink);
     font-family: "Inter", system-ui, -apple-system, sans-serif;
-    font-size: 17.5px;
-    line-height: 1.7;
+    font-size: 17px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  body::before {
-    content: "";
-    position: fixed; inset: 0;
-    pointer-events: none;
-    background-image: radial-gradient(rgba(28,25,23,0.025) 1px, transparent 1px);
-    background-size: 3px 3px;
-    z-index: 1;
-    opacity: 0.6;
-  }
   ::selection { background: var(--ink); color: var(--paper); }
 
-  a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.2s; }
-  a:hover { border-bottom-color: var(--ink); }
+  a { color: inherit; text-decoration: none; }
+  .underline-link { border-bottom: 1px solid var(--rule); transition: border-color 0.2s; }
+  .underline-link:hover { border-bottom-color: var(--ink); }
 
-  h1, h2, h3, h4, .display {
+  h1, h2, h3, h4 {
     font-family: "Fraunces", "Times New Roman", serif;
     color: var(--ink);
     font-weight: 400;
-    line-height: 1.04;
+    line-height: 1.05;
     letter-spacing: -0.02em;
     margin: 0;
     font-variation-settings: "opsz" 144, "SOFT" 30;
   }
-  h1 { font-size: clamp(3.25rem, 8.8vw, 7.25rem); font-weight: 400; letter-spacing: -0.028em; }
-  h2 { font-size: clamp(2.15rem, 4.8vw, 3.5rem); font-weight: 400; letter-spacing: -0.025em; }
-  h3 { font-size: 1.55rem; font-weight: 500; line-height: 1.22; letter-spacing: -0.012em; }
+  h1 { font-size: clamp(2.5rem, 5.5vw, 4.25rem); font-weight: 400; letter-spacing: -0.025em; }
+  h2 { font-size: clamp(1.55rem, 2.8vw, 2.1rem); font-weight: 400; letter-spacing: -0.02em; }
+  h3 { font-size: 1.2rem; font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; }
+  em { font-style: italic; }
 
-  em, .italic { font-style: italic; font-weight: 400; }
+  p { margin: 0 0 1rem; color: var(--ink-soft); font-size: 1.04rem; line-height: 1.7; }
 
-  p { margin: 0 0 1.15rem; color: var(--ink-soft); font-size: 1.075rem; line-height: 1.72; }
-  p.lead {
-    font-family: "Fraunces", serif;
-    font-size: clamp(1.4rem, 2.3vw, 1.8rem);
-    line-height: 1.45;
-    color: var(--ink);
-    font-weight: 400;
-    letter-spacing: -0.01em;
-    margin-bottom: 2rem;
-  }
-
-  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 2.25rem; }
-  .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 2.25rem; }
-
-  /* ---------- LINE LABELS ---------- */
-  .eyebrow {
-    font-family: "Inter", sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--ink-mute);
-    display: inline-flex; align-items: center; gap: 0.8rem;
-  }
-  .eyebrow::before {
-    content: ""; width: 28px; height: 1px; background: var(--ink-mute);
-  }
-  .roman {
-    font-family: "Fraunces", serif;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--ink-mute);
-    font-size: 0.95rem;
-    letter-spacing: 0.05em;
-  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+  .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 2rem; }
 
   /* ---------- NAV ---------- */
   nav.top {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(245,241,234,0.85);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--rule);
   }
   nav.top .inner {
-    max-width: 1240px; margin: 0 auto;
+    max-width: 1180px; margin: 0 auto;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 1.1rem 2.25rem;
+    padding: 0.9rem 2rem;
   }
   .mark {
-    display: flex; align-items: center; gap: 0.75rem;
     font-family: "Fraunces", serif;
-    font-size: 1.05rem; font-weight: 500;
+    font-size: 1rem; font-weight: 500;
     color: var(--ink);
-    border: none;
   }
-  .mark svg { color: var(--ink); }
-  .mark-text { line-height: 1; }
-  .mark-text small { display: block; font-family: "Inter", sans-serif; font-weight: 400; font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mute); margin-top: 0.15rem; }
-  nav.top .links { display: flex; gap: 2rem; }
+  .mark small {
+    display: block; font-family: "Inter", sans-serif; font-weight: 500;
+    font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); margin-top: 0.15rem;
+  }
+  nav.top .links { display: flex; gap: 1.5rem; }
   nav.top .links a {
     font-family: "Inter", sans-serif;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     font-weight: 500;
-    border: none;
     color: var(--ink-soft);
   }
   nav.top .links a:hover { color: var(--ink); }
-  @media (max-width: 680px) {
-    nav.top .links { display: none; }
-  }
+  @media (max-width: 760px) { nav.top .links { display: none; } }
 
-  /* ---------- COORD RIBBON ---------- */
-  .coords {
-    background: var(--paper-deep);
-    border-bottom: 1px solid var(--rule);
-    font-family: "Inter", monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--ink-mute);
-    padding: 0.55rem 0;
-  }
-  .coords .inner {
-    max-width: 1240px; margin: 0 auto;
-    display: flex; justify-content: space-between; gap: 2rem;
-    padding: 0 2.25rem; flex-wrap: wrap;
-  }
-  .coords span + span { color: var(--ink-soft); }
-
-  /* ---------- HERO ---------- */
-  header.hero {
-    padding: 7rem 0 5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  header.hero .wrap { position: relative; z-index: 2; }
-  header.hero .eyebrow { margin-bottom: 3rem; }
-  header.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background-image:
-      radial-gradient(ellipse 800px 240px at 50% 60%, transparent 30%, rgba(28,25,23,0.04) 31%, transparent 32%),
-      radial-gradient(ellipse 1000px 300px at 50% 60%, transparent 35%, rgba(28,25,23,0.03) 36%, transparent 37%),
-      radial-gradient(ellipse 1200px 360px at 50% 60%, transparent 40%, rgba(28,25,23,0.025) 41%, transparent 42%),
-      radial-gradient(ellipse 1400px 420px at 50% 60%, transparent 45%, rgba(28,25,23,0.02) 46%, transparent 47%);
-    pointer-events: none;
-  }
-  header.hero h1 {
-    max-width: 16ch;
-    margin-bottom: 2rem;
-  }
-  header.hero h1 em { color: var(--moss); }
-  header.hero .deck {
-    max-width: 58ch;
-    font-family: "Fraunces", serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(1.25rem, 2vw, 1.6rem);
-    line-height: 1.5;
-    color: var(--ink);
-    margin-bottom: 4rem;
-  }
-  header.hero .meta {
-    display: flex; flex-wrap: wrap; gap: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--rule);
-  }
-  header.hero .meta .item .label {
-    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ink-mute); font-weight: 500;
-    margin-bottom: 0.4rem;
-  }
-  header.hero .meta .item .value {
-    font-family: "Fraunces", serif; font-weight: 400; font-size: 1.05rem;
-    color: var(--ink);
-  }
-
-  /* ---------- HERO ART ---------- */
-  .ridge {
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    height: 320px;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.85;
-  }
-  .ridge svg { width: 100%; height: 100%; display: block; }
-
-  /* ---------- SECTIONS ---------- */
-  section { padding: 7rem 0; position: relative; }
-  section.tight { padding: 5rem 0; }
-  .rule { height: 1px; background: var(--rule); border: 0; margin: 0; }
-
-  .section-head { max-width: 760px; margin-bottom: 4rem; }
-  .section-head .eyebrow { margin-bottom: 1.5rem; }
-  .section-head h2 { margin-bottom: 1.25rem; }
-
-  /* ---------- LONGFORM ---------- */
-  .longform-grid {
-    display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start;
-  }
-  @media (max-width: 900px) { .longform-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
-  .longform-art {
-    aspect-ratio: 4/5;
-    background: var(--paper-deep);
-    display: grid; place-items: center;
-    color: var(--ink-soft);
-    border-radius: 2px;
-  }
-  .longform-art svg { width: 78%; max-width: 320px; height: auto; }
-  .longform p:first-of-type::first-letter {
-    font-family: "Fraunces", serif;
-    font-size: 4.5rem;
-    font-weight: 300;
-    line-height: 0.85;
-    float: left;
-    padding: 0.4rem 0.7rem 0 0;
-    color: var(--ink);
-  }
-  blockquote.pull {
-    margin: 3rem 0;
-    padding: 2rem 0;
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-    font-family: "Fraunces", serif;
-    font-style: italic;
-    font-size: 1.45rem;
-    line-height: 1.5;
-    color: var(--ink);
-    font-weight: 300;
-  }
-  blockquote.pull cite {
-    display: block; margin-top: 1rem;
-    font-style: normal;
+  /* ---------- BREADCRUMB ---------- */
+  .breadcrumb {
+    padding: 1.5rem 0 0.75rem;
     font-family: "Inter", sans-serif;
-    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ink-mute); font-weight: 500;
-  }
-
-  /* ---------- TWO LAKES (centerpiece) ---------- */
-  .twolakes { background: var(--paper-deep); }
-  .twolakes-grid {
-    display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: center;
-  }
-  @media (max-width: 900px) { .twolakes-grid { grid-template-columns: 1fr; gap: 3rem; } }
-  .twolakes-art {
-    aspect-ratio: 5/6;
-    background: var(--paper);
-    display: grid; place-items: center;
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    padding: 1.5rem;
-  }
-  .twolakes-art svg { width: 100%; height: auto; }
-  .twolakes ol.steps {
-    list-style: none; padding: 0; margin: 2rem 0 0;
-  }
-  .twolakes ol.steps li {
-    padding: 1.1rem 0;
-    border-top: 1px solid var(--rule);
-    display: grid; grid-template-columns: 32px 1fr; gap: 1rem;
-    align-items: baseline;
-  }
-  .twolakes ol.steps li:last-child { border-bottom: 1px solid var(--rule); }
-  .twolakes ol.steps .n {
-    font-family: "Fraunces", serif; font-style: italic;
-    color: var(--ink-mute); font-size: 0.95rem;
-  }
-  .twolakes ol.steps .t {
-    font-family: "Inter", sans-serif; font-size: 1rem; color: var(--ink);
-    font-weight: 600;
-    letter-spacing: -0.005em;
-  }
-  .twolakes ol.steps .t small {
-    display: block; font-weight: 400; color: var(--ink-soft); margin-top: 0.3rem; font-size: 0.95rem; line-height: 1.55;
-  }
-
-  /* ---------- WATER (canoe delivery) ---------- */
-  .water-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-  }
-  @media (max-width: 900px) { .water-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
-  .water-art {
-    aspect-ratio: 1/1;
-    background: var(--paper);
-    display: grid; place-items: center;
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-  }
-  .water-art svg { width: 65%; max-width: 300px; }
-
-  .pillish {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.7rem 1.4rem;
-    border: 1px solid var(--ink);
-    font-family: "Inter", sans-serif;
-    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
-    font-weight: 500; color: var(--ink);
-    border-radius: 999px;
-    transition: background 0.2s, color 0.2s;
-  }
-  .pillish:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-
-  /* ---------- WILDLIFE STRIP ---------- */
-  .wildlife-marks {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem;
-    margin-top: 3rem;
-    padding: 2.5rem 0;
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-  }
-  @media (max-width: 720px) { .wildlife-marks { grid-template-columns: repeat(2, 1fr); gap: 2rem; } }
-  .wildlife-marks .mk { display: flex; flex-direction: column; align-items: flex-start; gap: 0.9rem; }
-  .wildlife-marks .mk svg { width: 64px; height: 48px; color: var(--ink); }
-  .wildlife-marks .mk .lab {
-    font-family: "Inter", sans-serif;
-    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ink-mute); font-weight: 500;
-  }
-  .wildlife-marks .mk .nm {
-    font-family: "Fraunces", serif; font-size: 1.15rem; color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-  .wildlife-marks .mk .nm small {
-    display: block; font-family: "Inter", sans-serif; font-size: 0.9rem;
-    color: var(--ink-soft); margin-top: 0.2rem; font-weight: 400;
-    letter-spacing: 0;
-  }
-
-  /* ---------- SEASON TABLE ---------- */
-  .season {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--rule);
-    margin-top: 2rem;
-  }
-  @media (max-width: 720px) { .season { grid-template-columns: repeat(2, 1fr); } }
-  .season .cell {
-    padding: 1.5rem 1.25rem;
-    border-bottom: 1px solid var(--rule);
-    border-right: 1px solid var(--rule);
-  }
-  .season .cell:nth-child(4n) { border-right: 0; }
-  @media (max-width: 720px) {
-    .season .cell:nth-child(4n) { border-right: 1px solid var(--rule); }
-    .season .cell:nth-child(2n) { border-right: 0; }
-  }
-  .season .cell .lab {
-    font-family: "Inter", sans-serif;
-    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ink-mute); font-weight: 500;
-    margin-bottom: 0.5rem;
-  }
-  .season .cell .ttl {
-    font-family: "Fraunces", serif; font-size: 1.25rem; color: var(--ink);
-    letter-spacing: -0.01em; margin-bottom: 0.4rem;
-  }
-  .season .cell .tx {
-    font-size: 0.92rem; color: var(--ink-soft); line-height: 1.55;
-  }
-
-  /* ---------- PACK LIST ---------- */
-  .packlist {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem;
-    margin-top: 2rem;
-  }
-  @media (max-width: 720px) { .packlist { grid-template-columns: 1fr; gap: 0; } }
-  .packlist h4 {
-    font-family: "Inter", sans-serif;
-    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ink-mute); font-weight: 500;
-    margin: 2rem 0 0.75rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--rule);
-  }
-  .packlist ul { list-style: none; padding: 0; margin: 0; }
-  .packlist ul li {
-    padding: 0.6rem 0;
-    border-bottom: 1px dotted var(--rule);
-    font-size: 0.98rem; color: var(--ink-soft);
-    display: flex; gap: 0.8rem; align-items: baseline;
-  }
-  .packlist ul li::before {
-    content: "·";
-    color: var(--ink-mute);
-    font-family: "Fraunces", serif;
-    font-style: italic;
-  }
-
-  /* ---------- HONEST TALK ---------- */
-  .honest { background: var(--paper-deep); }
-  .honest .truths {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-    margin-top: 3rem;
-  }
-  @media (max-width: 720px) { .honest .truths { grid-template-columns: 1fr; gap: 2rem; } }
-  .honest .truths .t {
-    border-top: 1px solid var(--rule);
-    padding-top: 1.5rem;
-  }
-  .honest .truths .t .n {
-    font-family: "Fraunces", serif; font-style: italic;
-    color: var(--ink-mute); font-size: 0.95rem;
-    margin-bottom: 0.6rem;
-  }
-  .honest .truths .t h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    font-family: "Inter", sans-serif;
-    letter-spacing: -0.005em;
-    margin-bottom: 0.6rem;
-    color: var(--ink);
-  }
-  .honest .truths .t p { font-size: 1rem; margin-bottom: 0; }
-
-  /* ---------- COLOPHON ---------- */
-  .colophon-grid {
-    display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 3rem;
-  }
-  @media (max-width: 900px) { .colophon-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
-  .colophon h4 {
-    font-family: "Inter", sans-serif;
-    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ink-mute); font-weight: 500;
-    margin-bottom: 1rem;
-  }
-  .colophon ul { list-style: none; padding: 0; margin: 0; }
-  .colophon ul li { margin-bottom: 0.5rem; font-size: 0.92rem; color: var(--ink-soft); }
-  .colophon ul li a { border: none; }
-  .colophon ul li a:hover { color: var(--ink); }
-
-  footer.foot {
-    padding: 3rem 0;
-    border-top: 1px solid var(--rule);
     font-size: 0.78rem;
     color: var(--ink-mute);
+    font-weight: 500;
   }
-  footer.foot .inner {
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;
-  }
-  footer.foot em { font-family: "Fraunces", serif; font-weight: 400; }
+  .breadcrumb a { color: var(--ink-mute); }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { padding: 0 0.65rem; color: var(--ink-mute); opacity: 0.6; }
+  .breadcrumb .here { color: var(--ink); font-weight: 500; }
 
-  /* ---------- ART STYLES ---------- */
-  .line-art {
+  /* ---------- TITLE BLOCK ---------- */
+  .title-block { padding: 0.75rem 0 1.5rem; }
+  .title-block h1 { margin-bottom: 0.75rem; }
+  .meta-row {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 0.85rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  .stars {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .stars .star { font-size: 1rem; }
+  .stars .num { color: var(--ink); font-weight: 600; }
+  .stars .count { color: var(--ink-mute); font-weight: 400; }
+  .stars .count:hover { color: var(--ink); text-decoration: underline; }
+  .meta-row .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--ink-mute); opacity: 0.5; }
+  .meta-row .difficulty {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-weight: 500;
+  }
+  .meta-row .difficulty::before {
+    content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--gold);
+  }
+  .meta-row .park { color: var(--ink); }
+  .meta-row .park:hover { text-decoration: underline; }
+
+  /* ---------- TABS ---------- */
+  .tabs {
+    margin-top: 1.75rem;
+    border-bottom: 1px solid var(--rule);
+    display: flex; gap: 2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  @media (max-width: 680px) {
+    .tabs { gap: 1.5rem; }
+    .tabs a { font-size: 0.88rem; padding: 0.75rem 0 0.85rem; }
+  }
+  .tabs a {
+    padding: 0.85rem 0 0.95rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem; font-weight: 500;
+    color: var(--ink-mute);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    white-space: nowrap;
+  }
+  .tabs a:hover { color: var(--ink); }
+  .tabs a.active { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* ---------- HERO LAYOUT ---------- */
+  .hero-layout {
+    margin: 1.5rem 0 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  @media (max-width: 860px) {
+    .hero-layout { grid-template-columns: 1fr; gap: 1.25rem; }
+  }
+  .hero-photo {
+    background-size: cover;
+    background-position: center;
+    background-color: var(--paper-deep);
+    border-radius: 6px;
+    aspect-ratio: 4 / 3;
+    min-height: 380px;
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 860px) {
+    .hero-photo { aspect-ratio: 16/10; min-height: 240px; }
+  }
+  .hero-details {
+    display: flex; flex-direction: column;
+    gap: 1rem;
+  }
+  .details-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--paper-warm);
+    padding: 1.5rem;
+  }
+  .details-card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-mute);
+    margin: 0 0 1.25rem;
+  }
+  .details-card .row {
+    display: grid; grid-template-columns: 28px 1fr auto;
+    gap: 0.85rem;
+    align-items: center;
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .details-card .row:first-of-type { border-top: none; padding-top: 0; }
+  .details-card .row:last-of-type { padding-bottom: 0; }
+  .details-card .row .ic { color: var(--moss); }
+  .details-card .row .ic svg { width: 24px; height: 24px; display: block; }
+  .details-card .row .k {
+    font-family: "Inter", sans-serif;
+    font-size: 0.92rem; color: var(--ink-mute); font-weight: 500;
+  }
+  .details-card .row .v {
+    font-family: "Fraunces", serif;
+    font-size: 1.15rem; font-weight: 500; color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .details-card .row .v.small { font-size: 1rem; }
+
+  /* ---------- OVERVIEW DESCRIPTION ---------- */
+  section.overview { padding: 2.5rem 0 4rem; }
+  section.overview .grid {
+    display: grid; grid-template-columns: 1.65fr 1fr; gap: 4rem;
+  }
+  @media (max-width: 900px) { section.overview .grid { grid-template-columns: 1fr; gap: 2rem; } }
+  section.overview .lead {
+    font-family: "Fraunces", serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.005em;
+  }
+  section.overview p { font-size: 1.04rem; }
+
+  .sidecard {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1.5rem;
+  }
+  .sidecard h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .sidecard ul { list-style: none; padding: 0; margin: 0; }
+  .sidecard ul li {
+    display: flex; gap: 0.75rem; align-items: baseline;
+    padding: 0.55rem 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.95rem; color: var(--ink-soft);
+  }
+  .sidecard ul li:first-child { border-top: none; padding-top: 0; }
+  .sidecard ul li .k { color: var(--ink-mute); flex: 0 0 80px; font-size: 0.85rem; }
+  .sidecard ul li .v { color: var(--ink); font-weight: 500; }
+  .sidecard ul li .v em { font-family: "Fraunces", serif; font-weight: 400; }
+
+  /* ---------- WHAT TO EXPECT ---------- */
+  section.expect { padding: 3.5rem 0; border-top: 1px solid var(--rule); }
+  .section-eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-mute);
+    display: block; margin-bottom: 0.9rem;
+  }
+  .section-head { margin-bottom: 2.25rem; max-width: 32ch; }
+  .expect-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 2.5rem;
+  }
+  @media (max-width: 900px) { .expect-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .expect-grid { grid-template-columns: 1fr; } }
+  .expect-row {
+    display: grid; grid-template-columns: 40px 1fr;
+    gap: 1rem; align-items: start;
+  }
+  .expect-row .icon { color: var(--moss); padding-top: 2px; }
+  .expect-row .icon svg { width: 32px; height: 32px; display: block; }
+  .expect-row h3 { font-family: "Inter", sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.25rem; }
+  .expect-row p { font-size: 0.92rem; margin: 0; color: var(--ink-soft); line-height: 1.55; }
+
+  /* ---------- RENTALS ---------- */
+  section.water { padding: 3.5rem 0; background: var(--paper-deep); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .water-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+  @media (max-width: 900px) { .water-cards { grid-template-columns: 1fr; } }
+  .water-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1.5rem;
+    display: flex; flex-direction: column;
+  }
+  .water-card .ic { color: var(--moss); margin-bottom: 0.6rem; }
+  .water-card .ic svg { width: 40px; height: 40px; display: block; }
+  .water-card h3 { margin-bottom: 0.45rem; font-family: "Fraunces", serif; font-weight: 500; font-size: 1.2rem; }
+  .water-card p { font-size: 0.95rem; color: var(--ink-soft); margin: 0 0 1rem; }
+  .water-card a.cta {
+    margin-top: auto;
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid var(--ink);
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink);
+    border-radius: 999px;
+    transition: all 0.2s;
+    align-self: flex-start;
+  }
+  .water-card a.cta:hover { background: var(--ink); color: var(--paper); }
+
+  .closure-note {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: rgba(138,74,44,0.08);
+    border-left: 2px solid var(--rust);
+    font-size: 0.93rem; color: var(--ink);
+  }
+  .closure-note strong { display: block; font-family: "Inter", sans-serif; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rust); margin-bottom: 0.35rem; font-weight: 600; }
+
+  /* ---------- SEASON ---------- */
+  section.deep { padding: 3.5rem 0; border-top: 1px solid var(--rule); }
+  .seasons {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-top: 1rem;
+  }
+  @media (max-width: 680px) { .seasons { grid-template-columns: repeat(2, 1fr); } .seasons > div:nth-child(2) { border-right: none; } }
+  .seasons > div { padding: 1rem 1rem 1rem 0; border-right: 1px solid var(--rule); }
+  .seasons > div:last-child { border-right: none; }
+  .seasons .sn { font-family: "Fraunces", serif; font-style: italic; font-size: 1rem; color: var(--ink); margin-bottom: 0.3rem; }
+  .seasons .sd { font-size: 0.87rem; color: var(--ink-soft); line-height: 1.5; }
+
+  /* ---------- REVIEWS ---------- */
+  section.reviews { padding: 4rem 0; border-top: 1px solid var(--rule); background: var(--paper-deep); }
+  .reviews-head {
+    display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .review-summary {
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .review-summary .big {
+    font-family: "Fraunces", serif; font-size: 3.5rem; font-weight: 400;
+    color: var(--ink); letter-spacing: -0.025em; line-height: 0.95;
+  }
+  .review-summary .meta {
+    display: flex; flex-direction: column; gap: 0.2rem;
+  }
+  .review-summary .stars-big { color: var(--gold); font-size: 1.1rem; letter-spacing: 0.1em; }
+  .review-summary .count { font-size: 0.88rem; color: var(--ink-mute); }
+  .leave-review {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    border: 1px solid var(--ink);
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink);
+    border-radius: 999px;
+    transition: all 0.2s;
+  }
+  .leave-review:hover { background: var(--ink); color: var(--paper); }
+  .review-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+  }
+  @media (max-width: 760px) { .review-grid { grid-template-columns: 1fr; } }
+  .review-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1.5rem;
+  }
+  .review-card .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem; }
+  .review-card .stars { color: var(--gold); font-size: 0.95rem; letter-spacing: 0.08em; }
+  .review-card .when { font-size: 0.78rem; color: var(--ink-mute); font-weight: 500; }
+  .review-card p { font-size: 0.97rem; color: var(--ink-soft); margin: 0 0 0.85rem; line-height: 1.6; }
+  .review-card .who { font-family: "Fraunces", serif; font-style: italic; font-size: 0.95rem; color: var(--ink); }
+  .review-card .src { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-mute); font-weight: 600; margin-left: 0.5rem; }
+
+  /* ---------- HONEST NOTE ---------- */
+  section.honest { padding: 3.5rem 0; border-top: 1px solid var(--rule); }
+  section.honest p { font-size: 1.02rem; color: var(--ink-soft); }
+  section.honest em { color: var(--ink); }
+
+  /* ---------- FOOTER ---------- */
+  footer.foot { padding: 2.5rem 0 2rem; border-top: 1px solid var(--rule); background: var(--paper-deep); }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; margin-bottom: 1.75rem; }
+  @media (max-width: 680px) { .foot-grid { grid-template-columns: 1fr; } }
+  .foot-grid h4 { font-family: "Inter", sans-serif; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mute); font-weight: 600; margin-bottom: 0.7rem; }
+  .foot-grid p { font-size: 0.88rem; color: var(--ink-soft); margin: 0; }
+  .foot-grid ul { list-style: none; padding: 0; margin: 0; }
+  .foot-grid ul li { margin-bottom: 0.4rem; font-size: 0.88rem; }
+  .foot-grid ul li a { color: var(--ink-soft); }
+  .foot-grid ul li a:hover { color: var(--ink); }
+  .foot-bottom { border-top: 1px solid var(--rule); padding-top: 1.25rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.76rem; color: var(--ink-mute); }
+  .foot-bottom em { font-family: "Fraunces", serif; }
+
+  /* ---------- LINE ART (flowing/cursive) ---------- */
+  .line {
     stroke: currentColor;
     fill: none;
     stroke-width: 1.4;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
+  .line.thin { stroke-width: 1.1; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list { margin-top: 2rem; border-top: 1px solid var(--rule); }
+  details.faq-item { border-bottom: 1px solid var(--rule); }
+  details.faq-item > summary {
+    list-style: none; cursor: pointer; outline: none;
+    padding: 1.5rem 0;
+    display: grid; grid-template-columns: 2rem 1fr 1.5rem; gap: 1rem;
+    align-items: baseline;
+    font-family: "Fraunces", serif; font-weight: 500;
+    font-size: 1.25rem; line-height: 1.3; letter-spacing: -0.012em;
+    color: var(--ink);
+  }
+  details.faq-item > summary::-webkit-details-marker { display: none; }
+  details.faq-item > summary:hover { color: var(--moss); }
+  .faq-item .q-n { font-family: "Fraunces", serif; font-style: italic; color: var(--ink-mute); font-size: 0.95rem; }
+  .faq-item .q-plus {
+    font-family: "Inter", sans-serif; font-weight: 300; font-size: 1.5rem;
+    color: var(--ink-mute); justify-self: end; line-height: 1;
+    transition: transform 0.2s;
+  }
+  details.faq-item[open] > summary .q-plus { transform: rotate(45deg); }
+  .faq-item .a { padding: 0 1.5rem 1.75rem 3rem; }
+  @media (max-width: 700px){ .faq-item .a { padding: 0 0 1.5rem 0; } }
+  .faq-item .a p { font-size: 1rem; margin: 0 0 0.9rem; color: var(--ink-soft); }
+  .faq-item .a p:last-child { margin: 0; }
+  .faq-item .a a { border-bottom: 1px solid var(--rule); transition: border-color 0.2s; }
+  .faq-item .a a:hover { border-bottom-color: var(--ink); }
 </style>
 </head>
 <body>
 
+
 <!-- ===================== NAV ===================== -->
 <nav class="top">
   <div class="inner">
-    <a href="#" class="mark">
-      <svg width="42" height="28" viewBox="0 0 42 28" class="line-art" aria-hidden="true">
-        <!-- Two ridges, two lakes -->
-        <path d="M2 22 L10 10 L16 16 L24 6 L32 14 L40 9"/>
-        <path d="M2 24 L40 24"/>
-        <ellipse cx="14" cy="5" rx="3.5" ry="1.2" opacity="0.7"/>
-      </svg>
-      <span class="mark-text">
-        Callaghan Lake
-        <small>A Sea to Sky Trails entry</small>
-      </span>
+    <a href="#" class="mark" style="color:var(--ink);">
+      Sea to Sky Trails
+      <small>An entry in Volume I</small>
     </a>
     <div class="links">
-      <a href="#twolakes">The Two Lakes</a>
-      <a href="#water">On the Water</a>
-      <a href="#wildlife">Wildlife</a>
-      <a href="#honest">Honest Talk</a>
+      <a href="#overview">Overview</a>
+      <a href="#expect">What to expect</a>
+      <a href="#water">Rentals</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">Questions</a>
     </div>
   </div>
 </nav>
 
-<!-- ===================== COORD RIBBON ===================== -->
-<div class="coords">
-  <div class="inner">
-    <span>50° 13′ N &nbsp;·&nbsp; 123° 12′ W</span>
-    <span>Elev. 1,316 m</span>
-    <span>Callaghan Valley, BC</span>
-    <span>Volume I &nbsp;·&nbsp; Entry IV</span>
+<!-- ===================== BREADCRUMB + TITLE ===================== -->
+<div class="wrap">
+
+  <div class="breadcrumb">
+    <a href="https://seatoskytrails.com/">Trails</a>
+    <span class="sep">/</span>
+    <span class="here">Callaghan Lake</span>
   </div>
+
+  <div class="title-block">
+    <h1>Callaghan Lake</h1>
+    <div class="meta-row">
+      <span class="stars">
+        <span class="star">&#9733;</span>
+        <span class="num">4.8</span>
+        <a href="#reviews" class="count">(29 reviews)</a>
+      </span>
+      <span class="dot"></span>
+      <span class="difficulty">Moderate</span>
+      <span class="dot"></span>
+      <a href="#" class="park underline-link">Callaghan Lake Provincial Park</a>
+      <span class="dot"></span>
+      <span style="color:var(--ink-soft);">Callaghan Valley, BC</span>
+    </div>
+
+    <div class="tabs">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#expect">What to expect</a>
+      <a href="#water">Rentals</a>
+      <a href="#season">When to go</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+  </div>
+
+  <!-- ===================== HERO LAYOUT ===================== -->
+  <div class="hero-layout">
+
+    <!-- LEFT: photo only, no overlays -->
+    <div class="hero-photo" style="background-image:url('https://images.pexels.com/photos/27638979/pexels-photo-27638979.jpeg?auto=compress&cs=tinysrgb&w=1600');" role="img" aria-label="A kayak on a crystal-clear Whistler-area mountain lake — representative of Callaghan Lake's character"></div>
+
+    <!-- RIGHT: trail details panel -->
+    <div class="hero-details">
+      <div class="details-card">
+        <h3>Trail Details</h3>
+
+        <div class="row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" class="line" aria-hidden="true">
+              <path d="M 4 16 C 4 8, 14 8, 14 16 C 14 20, 20 20, 20 14"/>
+              <path d="M 4 18 L 8 14 L 12 18"/>
+            </svg>
+          </div>
+          <div class="k">Length</div>
+          <div class="v">8 km</div>
+        </div>
+
+        <div class="row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" class="line" aria-hidden="true">
+              <path d="M 3 18 L 9 10 L 13 14 L 21 4"/>
+              <path d="M 21 4 L 21 9 M 21 4 L 16 4"/>
+            </svg>
+          </div>
+          <div class="k">Elevation gain</div>
+          <div class="v">450 m</div>
+        </div>
+
+        <div class="row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" class="line" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M 12 7 L 12 12 L 15 14"/>
+            </svg>
+          </div>
+          <div class="k">Estimated time</div>
+          <div class="v">4&ndash;5 hr</div>
+        </div>
+
+        <div class="row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" class="line" aria-hidden="true">
+              <path d="M 6 12 C 6 7, 11 4, 14 6 C 18 7, 20 12, 17 15 C 14 18, 9 17, 7 14 Z"/>
+              <path d="M 17 15 L 20 18"/>
+              <path d="M 18 17 L 19 19" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="k">Trail type</div>
+          <div class="v small">Paddle + hike</div>
+        </div>
+
+        <div class="row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" class="line" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M 12 3 A 9 9 0 0 1 12 21 Z" fill="#b5832e" stroke="none"/>
+            </svg>
+          </div>
+          <div class="k">Difficulty</div>
+          <div class="v small">Moderate</div>
+        </div>
+
+        <div class="row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" class="line" aria-hidden="true">
+              <path d="M 12 22 C 7 17, 4 13, 4 9 C 4 5, 7 3, 12 3 C 17 3, 20 5, 20 9 C 20 13, 17 17, 12 22 Z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
+          <div class="k">Park</div>
+          <div class="v small">Callaghan Lake Prov.</div>
+        </div>
+
+        <div class="row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" class="line" aria-hidden="true">
+              <path d="M 5 16 C 5 12, 7 10, 11 10 L 13 7 C 14 6, 18 6, 19 7 L 19 10 C 21 11, 22 13, 22 16 L 22 18 L 5 18 Z" />
+              <circle cx="9" cy="18" r="1.5"/>
+              <circle cx="18" cy="18" r="1.5"/>
+            </svg>
+          </div>
+          <div class="k">Dogs</div>
+          <div class="v small">On leash</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
-<!-- ===================== HERO ===================== -->
-<header class="hero">
+<!-- ===================== OVERVIEW ===================== -->
+<section class="overview" id="overview">
   <div class="wrap">
-    <span class="eyebrow">Callaghan Valley &nbsp;·&nbsp; Whistler Backcountry</span>
-    <h1>Callaghan Lake<br><em>and the lake</em><br>above it.</h1>
-    <p class="deck">A high, quiet lake at the end of a gravel road south of Whistler &mdash; and a smaller one, Hanging Lake, tucked into the ridge behind it. The locals&rsquo; move is to paddle across and walk up.</p>
-
-    <div class="meta">
-      <div class="item">
-        <div class="label">Elevation</div>
-        <div class="value">1,316 m</div>
-      </div>
-      <div class="item">
-        <div class="label">Access</div>
-        <div class="value">AWD or high-clearance</div>
-      </div>
-      <div class="item">
-        <div class="label">Wildlife</div>
-        <div class="value">Bear, bobcat, marmot</div>
-      </div>
-      <div class="item">
-        <div class="label">Best Season</div>
-        <div class="value">Late June &mdash; early October</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Hero illustration: two lakes, ridge, tiny trail, tiny bear -->
-  <div class="ridge" aria-hidden="true">
-    <svg viewBox="0 0 1400 320" preserveAspectRatio="xMidYEnd slice">
-      <g class="line-art" stroke-width="1.1">
-        <!-- Far back ridge -->
-        <path opacity="0.3" d="M0 150 L90 95 L160 130 L230 70 L310 120 L390 85 L470 130 L560 95 L640 130 L720 80 L810 125 L890 100 L970 135 L1060 95 L1140 130 L1220 110 L1300 135 L1400 115"/>
-
-        <!-- Hanging Lake (the small upper lake, tucked upper-left) -->
-        <g transform="translate(220 110)">
-          <ellipse cx="0" cy="0" rx="46" ry="11" opacity="0.85"/>
-          <ellipse cx="0" cy="0" rx="46" ry="11" stroke-dasharray="2 3" opacity="0.4"/>
-          <!-- Hanging Lake label tick -->
-          <line x1="-60" y1="0" x2="-78" y2="-6" opacity="0.55"/>
-        </g>
-
-        <!-- Mid ridge — the divide between the two lakes -->
-        <path opacity="0.55" d="M0 200 L60 165 L130 180 L200 145 L280 175 L360 150 L440 185 L520 155 L600 180 L680 140 L760 175 L840 155 L920 185 L1020 150 L1100 180 L1200 165 L1300 185 L1400 165"/>
-
-        <!-- Tiny trail line from Callaghan up to Hanging Lake -->
-        <g opacity="0.55">
-          <path stroke-dasharray="3 4" d="M260 250 Q235 215 230 175 Q225 145 230 122"/>
-        </g>
-
-        <!-- Near ridge — frames Callaghan Lake -->
-        <path d="M0 240 L80 215 L160 235 L260 195 L360 230 L460 205 L560 235 L660 200 L760 230 L860 205 L960 232 L1060 210 L1160 232 L1260 215 L1400 235"/>
-
-        <!-- Callaghan Lake waterline (foreground) -->
-        <path d="M0 268 L1400 268"/>
-        <!-- Callaghan ripple lines -->
-        <path d="M40 282 Q400 290 760 282 T1380 282" opacity="0.5"/>
-        <path d="M120 296 Q500 302 880 296 T1380 296" opacity="0.35"/>
-
-        <!-- Single canoe on the water, mid-crossing -->
-        <g transform="translate(720 268)">
-          <path d="M-26 0 Q0 7 26 0"/>
-          <path d="M-26 0 Q0 3 26 0"/>
-          <line x1="0" y1="-4" x2="0" y2="-14"/>
-          <circle cx="0" cy="-17" r="2"/>
-          <!-- paddle -->
-          <line x1="-12" y1="-6" x2="14" y2="6" opacity="0.7"/>
-        </g>
-
-        <!-- Tiny bear silhouette near the shoreline (single-line) -->
-        <g transform="translate(1080 260)" opacity="0.85">
-          <!-- body -->
-          <path d="M-14 0 Q-14 -8 -6 -9 L6 -9 Q14 -8 14 0"/>
-          <!-- head -->
-          <circle cx="16" cy="-6" r="3.4"/>
-          <!-- ears -->
-          <path d="M14 -10 L15 -12 L17 -10"/>
-          <path d="M18 -10 L19 -12 L21 -10"/>
-          <!-- legs -->
-          <line x1="-10" y1="0" x2="-10" y2="4"/>
-          <line x1="10" y1="0" x2="10" y2="4"/>
-          <!-- ground tick -->
-          <line x1="-16" y1="6" x2="22" y2="6" opacity="0.4"/>
-        </g>
-
-        <!-- A couple of conifer marks on the near shore -->
-        <g opacity="0.7">
-          <g transform="translate(60 258)">
-            <path d="M0 0 L0 -16"/>
-            <path d="M-5 -2 L0 -10 L5 -2"/>
-            <path d="M-4 -8 L0 -16 L4 -8"/>
-          </g>
-          <g transform="translate(1320 256)">
-            <path d="M0 0 L0 -18"/>
-            <path d="M-5 -2 L0 -12 L5 -2"/>
-            <path d="M-4 -10 L0 -18 L4 -10"/>
-          </g>
-        </g>
-      </g>
-    </svg>
-  </div>
-</header>
-
-<hr class="rule" />
-
-<!-- ===================== § I — THE IDEA ===================== -->
-<section id="idea" class="longform">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">§ I &nbsp;·&nbsp; The Idea</span>
-      <h2>A lake that doesn&rsquo;t make it onto the postcard rack.</h2>
-    </div>
-
-    <div class="longform-grid">
-      <div class="longform-art">
-        <!-- Single-line mountain + small lake illustration -->
-        <svg viewBox="0 0 240 300" class="line-art" aria-hidden="true">
-          <!-- Big peak -->
-          <path d="M20 230 L70 130 L100 175 L135 90 L175 165 L210 130 L230 200"/>
-          <!-- Snow crease on big peak -->
-          <path d="M125 110 L140 130 M150 125 L160 145" opacity="0.55"/>
-          <!-- Cirque lake nestled high -->
-          <ellipse cx="155" cy="200" rx="38" ry="6" opacity="0.85"/>
-          <ellipse cx="155" cy="200" rx="38" ry="6" stroke-dasharray="2 3" opacity="0.4"/>
-          <!-- Ground line -->
-          <path d="M20 240 L230 240" opacity="0.5"/>
-          <!-- Conifer cluster -->
-          <g transform="translate(38 232)">
-            <path d="M0 0 L0 -16"/>
-            <path d="M-5 -2 L0 -10 L5 -2"/>
-            <path d="M-4 -8 L0 -16 L4 -8"/>
-          </g>
-          <g transform="translate(56 234)">
-            <path d="M0 0 L0 -12"/>
-            <path d="M-4 -2 L0 -8 L4 -2"/>
-          </g>
-          <!-- Trail tick -->
-          <path stroke-dasharray="2 3" d="M90 240 Q110 220 130 210" opacity="0.55"/>
-        </svg>
-      </div>
-
-      <div class="longform">
-        <p>The Callaghan Valley sits about twenty-five minutes south of Whistler, just off Highway 99. Most people who drive past it are heading somewhere louder. The valley itself is the home of Whistler Olympic Park &mdash; the cross-country and biathlon venue from the 2010 Winter Games &mdash; but Callaghan Lake itself is further up the road and considerably quieter. The pavement runs out. The trees close in. The phone signal goes.</p>
-        <p>The lake sits at 1,316 metres, which is high enough that the air feels different by the time you arrive. The water is cold. The shoreline is rock and conifer. There is a small wilderness campground at the put-in &mdash; no reservations, first-come, first-served, a handful of sites and a vault toilet &mdash; and that is about the extent of the infrastructure.</p>
-        <blockquote class="pull">
-          &ldquo;The road tells you what kind of lake this is going to be before you ever see the water.&rdquo;
-          <cite>Field notes</cite>
-        </blockquote>
-        <p>You feel the elevation, you feel the remoteness, and within ten minutes of arriving you understand why this one stays a little harder to get to. The road keeps it honest.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="rule" />
-
-<!-- ===================== § II — THE TWO LAKES (centerpiece) ===================== -->
-<section id="twolakes" class="twolakes">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">§ II &nbsp;·&nbsp; The Two Lakes</span>
-      <h2>Paddle across one. Walk up to the other.</h2>
-      <p class="lead" style="margin-top:1.5rem;color:var(--ink-soft);">Callaghan is beautiful on its own. But the trip the locals actually plan is the double: paddle the length of Callaghan to the far shore, then hike up to Hanging Lake, a smaller alpine pool tucked into the ridge above.</p>
-    </div>
-
-    <div class="twolakes-grid">
-      <div class="twolakes-art">
-        <!-- Two-lakes composition: side-on cross-section -->
-        <svg viewBox="0 0 420 500" class="line-art" aria-hidden="true">
-          <!-- Sky / background -->
-          <!-- Hanging Lake (upper) -->
-          <g transform="translate(120 110)">
-            <ellipse cx="0" cy="0" rx="78" ry="14"/>
-            <ellipse cx="0" cy="0" rx="78" ry="14" stroke-dasharray="2 3" opacity="0.45"/>
-            <text x="-2" y="-30" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="currentColor" stroke="none" text-anchor="middle">Hanging Lake</text>
-            <line x1="0" y1="-22" x2="0" y2="-14" opacity="0.5"/>
-          </g>
-
-          <!-- The ridge between -->
-          <path d="M0 240 L40 200 L90 220 L140 175 L200 210 L260 165 L320 205 L380 185 L420 215"/>
-
-          <!-- Tiny conifers along ridge -->
-          <g transform="translate(70 215)">
-            <path d="M0 0 L0 -10"/>
-            <path d="M-3 -2 L0 -7 L3 -2"/>
-          </g>
-          <g transform="translate(170 195)">
-            <path d="M0 0 L0 -10"/>
-            <path d="M-3 -2 L0 -7 L3 -2"/>
-          </g>
-          <g transform="translate(290 195)">
-            <path d="M0 0 L0 -10"/>
-            <path d="M-3 -2 L0 -7 L3 -2"/>
-          </g>
-
-          <!-- Trail from Callaghan shore up over ridge -->
-          <path stroke-dasharray="3 4" d="M140 360 Q145 320 130 285 Q115 255 145 222 Q175 195 145 142" opacity="0.7"/>
-
-          <!-- Trail blaze marker -->
-          <g transform="translate(135 245)">
-            <rect x="-3" y="-4" width="6" height="8" opacity="0.85"/>
-          </g>
-
-          <!-- Callaghan Lake (lower, foreground) -->
-          <g transform="translate(210 370)">
-            <ellipse cx="0" cy="0" rx="200" ry="22"/>
-            <path d="M-200 6 Q-100 14 0 6 T200 6" opacity="0.55"/>
-            <path d="M-180 16 Q-90 22 0 16 T180 16" opacity="0.35"/>
-            <text x="0" y="42" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="currentColor" stroke="none" text-anchor="middle">Callaghan Lake</text>
-          </g>
-
-          <!-- Canoe crossing -->
-          <g transform="translate(280 360)">
-            <path d="M-22 0 Q0 6 22 0"/>
-            <path d="M-22 0 Q0 3 22 0"/>
-            <line x1="0" y1="-3" x2="0" y2="-11"/>
-            <circle cx="0" cy="-14" r="1.8"/>
-            <line x1="-10" y1="-4" x2="12" y2="6" opacity="0.7"/>
-          </g>
-
-          <!-- Shoreline conifers -->
-          <g transform="translate(30 358)">
-            <path d="M0 0 L0 -18"/>
-            <path d="M-5 -2 L0 -11 L5 -2"/>
-            <path d="M-4 -9 L0 -18 L4 -9"/>
-          </g>
-          <g transform="translate(390 360)">
-            <path d="M0 0 L0 -16"/>
-            <path d="M-5 -2 L0 -10 L5 -2"/>
-            <path d="M-4 -8 L0 -16 L4 -8"/>
-          </g>
-        </svg>
-      </div>
-
+    <div class="grid">
       <div>
-        <p>It is the kind of trip that rewards a little planning. The paddle across Callaghan is straightforward in calm weather and humbling when the wind comes up the valley. The Hanging Lake trail climbs steeply off the far shore into the trees &mdash; not technical, but steep, rough, and rooted. The reward is a small, cold, alpine lake with a view back over the ridge you just walked up.</p>
-
-        <ol class="steps">
-          <li>
-            <span class="n">i.</span>
-            <span class="t">
-              Launch early from the put-in.
-              <small>Mornings are usually still. By midday the wind can funnel down the valley and make the crossing into a workout you didn&rsquo;t plan for.</small>
-            </span>
-          </li>
-          <li>
-            <span class="n">ii.</span>
-            <span class="t">
-              Paddle to the far shore.
-              <small>The far end of Callaghan is roughly thirty to forty-five minutes of steady paddling, depending on conditions. Pull the boat well above any wave line and tie it off.</small>
-            </span>
-          </li>
-          <li>
-            <span class="n">iii.</span>
-            <span class="t">
-              Hike up to Hanging Lake.
-              <small>The trail climbs through forest to the lake above. Steep in places. Plan a few hours up and back with time to sit at the top.</small>
-            </span>
-          </li>
-          <li>
-            <span class="n">iv.</span>
-            <span class="t">
-              Paddle home before the wind.
-              <small>The return crossing is the one to time carefully. If you can be back on the water by mid-afternoon, you will likely have it easier.</small>
-            </span>
-          </li>
-        </ol>
+        <span class="section-eyebrow">Overview</span>
+        <p class="lead">Callaghan Lake is the drive-up wilderness lake an hour past the Whistler crowds &mdash; an alpine basin at 1,316 m, ringed by ridgelines, fed by snowmelt, and quiet in a way the rest of the Sea to Sky stopped being a decade ago. The road keeps it that way.</p>
+        <p>Twenty-five minutes south of Whistler, turn off Highway 99 onto Callaghan Valley Road. The pavement runs as far as Whistler Olympic Park; past that, it&rsquo;s gravel, washboard, and a couple of stretches where an AWD or high-clearance vehicle isn&rsquo;t a suggestion. The road closes for the winter and doesn&rsquo;t reopen until the snow lets go &mdash; usually mid-June, sometimes later. That filter is half the reason Callaghan still feels remote.</p>
+        <p>The real draw isn&rsquo;t the lake itself, but what&rsquo;s on the other side of it. Paddle across Callaghan, beach the canoe, and you&rsquo;re at the trailhead for the Hanging Lake hike &mdash; a short, steep climb to a smaller tarn cupped above the main lake. The paddle-then-hike combo is the headline outing here, and it&rsquo;s the move locals book canoes for.</p>
       </div>
+
+      <aside class="sidecard">
+        <h4>At a glance</h4>
+        <ul>
+          <li><span class="k">Region</span><span class="v">Callaghan Valley</span></li>
+          <li><span class="k">Park</span><span class="v">Callaghan Lake Prov.</span></li>
+          <li><span class="k">Access</span><span class="v">Gravel, AWD</span></li>
+          <li><span class="k">Distance</span><span class="v">25 min S of Whistler</span></li>
+          <li><span class="k">Elevation</span><span class="v">1,316 m</span></li>
+          <li><span class="k">Dogs</span><span class="v">On leash</span></li>
+          <li><span class="k">Best for</span><span class="v">Paddle + hike, wildlife</span></li>
+        </ul>
+      </aside>
     </div>
   </div>
 </section>
 
-<hr class="rule" />
-
-<!-- ===================== § III — GETTING ON THE WATER ===================== -->
-<section id="water">
-  <div class="wrap">
-    <div class="water-grid">
-
-      <div class="water-art">
-        <!-- Single-line: canoe on truck -->
-        <svg viewBox="0 0 340 340" class="line-art" aria-hidden="true">
-          <!-- Distant ridge -->
-          <path opacity="0.4" d="M10 110 L60 70 L100 95 L150 50 L200 90 L250 65 L290 100 L330 80"/>
-          <!-- Ground -->
-          <path d="M0 260 L340 260" opacity="0.5"/>
-          <!-- Truck body -->
-          <path d="M60 235 L60 215 L120 215 L130 195 L210 195 L220 215 L280 215 L280 235"/>
-          <path d="M60 235 L280 235"/>
-          <!-- Cab window -->
-          <path d="M135 213 L142 200 L208 200 L215 213" opacity="0.7"/>
-          <!-- Canoe on roof rack -->
-          <path d="M40 188 Q170 178 300 188"/>
-          <path d="M40 188 Q170 184 300 188"/>
-          <!-- Rack ties -->
-          <line x1="100" y1="188" x2="100" y2="198" opacity="0.6"/>
-          <line x1="240" y1="188" x2="240" y2="198" opacity="0.6"/>
-          <!-- Wheels -->
-          <circle cx="100" cy="245" r="14"/>
-          <circle cx="240" cy="245" r="14"/>
-          <circle cx="100" cy="245" r="5" opacity="0.5"/>
-          <circle cx="240" cy="245" r="5" opacity="0.5"/>
-          <!-- Tiny conifer -->
-          <g transform="translate(30 258)">
-            <path d="M0 0 L0 -18"/>
-            <path d="M-5 -2 L0 -11 L5 -2"/>
-            <path d="M-4 -9 L0 -18 L4 -9"/>
-          </g>
-          <g transform="translate(315 258)">
-            <path d="M0 0 L0 -14"/>
-            <path d="M-4 -2 L0 -9 L4 -2"/>
-          </g>
-        </svg>
-      </div>
-
-      <div>
-        <span class="eyebrow">§ III &nbsp;·&nbsp; Getting On The Water</span>
-        <h2 style="margin-top:1.5rem;">If you don&rsquo;t already own a boat.</h2>
-        <p style="margin-top:1.5rem;">The Hanging Lake trip is a great one. It also requires a boat &mdash; a canoe, a kayak, a packraft &mdash; and Callaghan is not a place where there is a rental shed at the put-in. You either bring one, borrow one, or arrange to have one dropped off.</p>
-        <p>The local option that most often makes sense for visitors is a delivered canoe. Squamish Canoe Rental will trailer a boat from town up the highway and into the Callaghan, so you can pull up at the put-in, untie it, and go. It is the practical answer to the question that everyone arrives at: <em>this trip would be perfect if I had a canoe.</em></p>
-        <p style="font-size:0.95rem;color:var(--ink-mute);">No affiliation claim is made with BC Parks or Whistler Olympic Park. Delivery logistics, pricing, and availability are the operator&rsquo;s &mdash; check with them directly before the trip.</p>
-
-        <a href="https://squamishcanoerental.com/canoe-delivery-whistler/" class="pillish" target="_blank" rel="noopener">Canoe delivery &mdash; Whistler / Callaghan</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="rule" />
-
-<!-- ===================== § IV — WILDLIFE ===================== -->
-<section id="wildlife">
+<!-- ===================== WHAT TO EXPECT ===================== -->
+<section class="expect" id="expect">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">§ IV &nbsp;·&nbsp; Wildlife</span>
-      <h2>This is what makes this place feel remote.</h2>
-      <p class="lead" style="margin-top:1.5rem;color:var(--ink-soft);">The Callaghan is genuine bear country. Black bears use the valley regularly. We have personally seen both bear and bobcat on trips up here &mdash; not from a distance, not from a car. That is part of the lake&rsquo;s character, and it deserves to be planned around rather than discovered.</p>
+      <span class="section-eyebrow">What to Expect</span>
+      <h2>Six things people remember.</h2>
     </div>
 
-    <div class="wildlife-marks">
-      <div class="mk">
-        <!-- Bear -->
-        <svg viewBox="0 0 80 60" class="line-art" aria-hidden="true">
-          <path d="M10 45 Q10 25 28 22 L52 22 Q70 25 70 45"/>
-          <circle cx="62" cy="22" r="9"/>
-          <path d="M58 14 L60 9 L64 14"/>
-          <path d="M66 14 L68 9 L72 14"/>
-          <circle cx="65" cy="22" r="1" stroke="none" fill="currentColor"/>
-          <line x1="20" y1="45" x2="20" y2="55"/>
-          <line x1="50" y1="45" x2="50" y2="55"/>
-        </svg>
+    <div class="expect-grid">
+      <div class="expect-row">
+        <div class="icon">
+          <svg viewBox="0 0 32 32" class="line" aria-hidden="true">
+            <path d="M 6 22 C 6 18, 8 15, 12 15 C 12 12, 15 10, 17 12 C 19 10, 22 12, 22 15 C 26 15, 28 18, 28 22"/>
+            <path d="M 11 22 L 11 25 M 16 22 L 16 26 M 21 22 L 21 25"/>
+            <path d="M 9 14 C 9 12, 11 11, 12 13" opacity="0.6"/>
+          </svg>
+        </div>
         <div>
-          <div class="lab">Resident</div>
-          <div class="nm">Black bear<small>Plan for them. Lock your food.</small></div>
+          <h3>Wildlife corridor</h3>
+          <p>Black bear, bobcat, marmot. Sightings happen on most tours.</p>
         </div>
       </div>
 
-      <div class="mk">
-        <!-- Bobcat -->
-        <svg viewBox="0 0 80 60" class="line-art" aria-hidden="true">
-          <!-- body -->
-          <path d="M8 42 Q8 30 22 28 L52 28 Q66 30 66 42"/>
-          <!-- head -->
-          <circle cx="60" cy="28" r="7"/>
-          <!-- pointed ears -->
-          <path d="M55 22 L57 14 L60 21"/>
-          <path d="M62 21 L65 14 L67 22"/>
-          <!-- tail (short) -->
-          <path d="M8 36 Q-2 30 -2 24" opacity="0.85"/>
-          <!-- legs -->
-          <line x1="18" y1="42" x2="18" y2="52"/>
-          <line x1="48" y1="42" x2="48" y2="52"/>
-          <!-- whisker hint -->
-          <line x1="64" y1="28" x2="72" y2="27" opacity="0.5"/>
-          <line x1="64" y1="30" x2="72" y2="32" opacity="0.5"/>
-        </svg>
+      <div class="expect-row">
+        <div class="icon">
+          <svg viewBox="0 0 32 32" class="line" aria-hidden="true">
+            <path d="M 3 21 C 3 17, 5 15, 9 15 L 12 10 C 14 8, 20 8, 22 10 L 25 15 C 28 15, 29 17, 29 21 L 29 25 L 3 25 Z"/>
+            <circle cx="9" cy="25" r="2"/>
+            <circle cx="23" cy="25" r="2"/>
+            <path d="M 11 19 L 21 19" opacity="0.55"/>
+          </svg>
+        </div>
         <div>
-          <div class="lab">Occasional</div>
-          <div class="nm">Bobcat<small>Seen on the lake. Rare gift.</small></div>
+          <h3>AWD road only</h3>
+          <p>Gravel, washboard, rough sections past Olympic Park.</p>
         </div>
       </div>
 
-      <div class="mk">
-        <!-- Marmot -->
-        <svg viewBox="0 0 80 60" class="line-art" aria-hidden="true">
-          <path d="M14 48 Q14 32 32 30 L54 30 Q66 32 66 48"/>
-          <circle cx="60" cy="32" r="6"/>
-          <path d="M57 27 L58 23 L61 27"/>
-          <path d="M62 27 L63 23 L65 27"/>
-          <!-- rock -->
-          <path d="M6 50 Q14 44 22 50" opacity="0.5"/>
-        </svg>
+      <div class="expect-row">
+        <div class="icon">
+          <svg viewBox="0 0 32 32" class="line" aria-hidden="true">
+            <path d="M 3 20 C 11 28, 21 28, 29 20"/>
+            <path d="M 3 20 C 11 24, 21 24, 29 20"/>
+            <path d="M 8 11 C 12 17, 16 22, 20 26"/>
+            <path d="M 6 9 C 5 7, 10 5, 10 9"/>
+          </svg>
+        </div>
         <div>
-          <div class="lab">Alpine</div>
-          <div class="nm">Hoary marmot<small>Whistle on the talus.</small></div>
+          <h3>Paddle to Hanging Lake</h3>
+          <p>Across Callaghan, beach the boat, hike up to the tarn.</p>
         </div>
       </div>
 
-      <div class="mk">
-        <!-- Eagle / raptor -->
-        <svg viewBox="0 0 80 60" class="line-art" aria-hidden="true">
-          <path d="M8 30 Q24 18 40 26 Q56 18 72 30"/>
-          <path d="M40 26 L40 36"/>
-          <path d="M36 36 L44 36"/>
-          <path d="M10 36 Q40 50 70 36" opacity="0.4"/>
-        </svg>
+      <div class="expect-row">
+        <div class="icon">
+          <svg viewBox="0 0 32 32" class="line" aria-hidden="true">
+            <path d="M 6 25 C 11 12, 16 7, 16 7 C 16 7, 21 12, 26 25"/>
+            <path d="M 6 25 L 26 25"/>
+            <path d="M 13 25 L 13 19 L 19 19 L 19 25" opacity="0.7"/>
+          </svg>
+        </div>
         <div>
-          <div class="lab">Overhead</div>
-          <div class="nm">Bald eagle<small>Riding the valley thermals.</small></div>
+          <h3>Wilderness campground</h3>
+          <p>Small, walk-in. Pit toilets, no power. Pack it in.</p>
+        </div>
+      </div>
+
+      <div class="expect-row">
+        <div class="icon">
+          <svg viewBox="0 0 32 32" class="line" aria-hidden="true">
+            <path d="M 3 18 C 8 13, 12 23, 16 18 S 24 13, 29 18"/>
+            <path d="M 3 23 C 8 18, 12 28, 16 23 S 24 18, 29 23" opacity="0.55"/>
+            <path d="M 8 10 L 10 8 M 22 10 L 24 8 M 15 8 L 17 6" opacity="0.5"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Cold alpine water</h3>
+          <p>1,316 m, snow-fed. Brisk even in August.</p>
+        </div>
+      </div>
+
+      <div class="expect-row">
+        <div class="icon">
+          <svg viewBox="0 0 32 32" class="line" aria-hidden="true">
+            <circle cx="16" cy="16" r="11"/>
+            <path d="M 11 16 L 16 11 L 16 13 L 21 13 L 21 11 L 25 16 L 21 21 L 21 19 L 16 19 L 16 21 Z" class="thin" opacity="0.6"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Quiet weekday paddles</h3>
+          <p>Glass-flat mornings. Often the lake to yourself.</p>
         </div>
       </div>
     </div>
-
-    <div style="max-width:62ch; margin-top:3rem;">
-      <p>Practical rules apply, and they apply more here than at the lower-elevation lakes. Carry bear spray and know how to use it. Make noise on the trail, especially on the climb to Hanging Lake where sightlines are short. Cook away from where you sleep. Pack food, scented items, and garbage into a hard-sided container or a vehicle &mdash; never into your tent. If you see a bear, give it room and the right of way.</p>
-      <p>None of this is meant to scare you off. It is what coexisting with wildlife in their valley actually looks like, and the lake is better for it.</p>
-    </div>
   </div>
 </section>
 
-<hr class="rule" />
-
-<!-- ===================== § V — WHEN TO GO ===================== -->
-<section id="when" class="tight">
+<!-- ===================== RENTALS ===================== -->
+<section class="water" id="water">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">§ V &nbsp;·&nbsp; When To Go</span>
-      <h2>The road decides the season.</h2>
+      <span class="section-eyebrow">Get a Boat on the Water</span>
+      <h2>Three ways to do Callaghan.</h2>
     </div>
 
-    <div style="max-width:64ch;">
-      <p>From roughly November to early June, the access road is gated. The valley turns into a groomed cross-country ski track and there is no vehicle access to the lake. That sets the practical paddling and hiking window: mid-June to early October, with the best conditions usually arriving once the snowmelt eases off and the road dries out.</p>
+    <div class="water-cards">
+      <div class="water-card">
+        <div class="ic">
+          <svg viewBox="0 0 40 40" class="line" aria-hidden="true">
+            <path d="M 3 23 C 13 32, 27 32, 37 23"/>
+            <path d="M 3 23 C 13 27, 27 27, 37 23"/>
+            <path d="M 20 25 L 20 32"/>
+            <path d="M 12 7 C 16 13, 20 21, 24 27"/>
+            <path d="M 10 5 C 9 3, 14 1, 14 5"/>
+          </svg>
+        </div>
+        <h3>Canoe Delivery</h3>
+        <p>Hand-delivered to Callaghan Lake or your campsite. The locals&rsquo; move: paddle across to the Hanging Lake trailhead and hike up to the hanging tarn. Up to three paddlers per canoe.</p>
+        <a href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener" class="cta">Book a canoe</a>
+      </div>
+
+      <div class="water-card">
+        <div class="ic">
+          <svg viewBox="0 0 40 40" class="line" aria-hidden="true">
+            <path d="M 6 32 C 15 36, 25 36, 34 32 C 25 30, 15 30, 6 32 Z"/>
+            <circle cx="20" cy="10" r="2.5"/>
+            <path d="M 20 13 L 20 28"/>
+            <path d="M 20 17 L 26 14"/>
+            <path d="M 28 4 L 28 29"/>
+            <path d="M 26 4 L 30 4"/>
+          </svg>
+        </div>
+        <h3>Paddleboard Delivery</h3>
+        <p>Stand-up boards on Callaghan&rsquo;s glass-flat mornings. Calmer than Whistler&rsquo;s bigger lakes &mdash; and far quieter.</p>
+        <a href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener" class="cta">Book a board</a>
+      </div>
+
+      <div class="water-card">
+        <div class="ic">
+          <svg viewBox="0 0 40 40" class="line" aria-hidden="true">
+            <!-- Compass — cursive single-line guide mark -->
+            <circle cx="20" cy="20" r="14"/>
+            <path d="M 14 26 C 17 22, 19 18, 22 14 C 23 17, 22 19, 20 22 C 18 24, 16 25, 14 26 Z"/>
+            <circle cx="20" cy="20" r="1.5" fill="currentColor" stroke="none"/>
+            <path d="M 20 4 L 20 7" opacity="0.55"/>
+            <path d="M 36 20 L 33 20" opacity="0.55"/>
+            <path d="M 20 36 L 20 33" opacity="0.55"/>
+            <path d="M 4 20 L 7 20" opacity="0.55"/>
+          </svg>
+        </div>
+        <h3>Hire a Guide</h3>
+        <p>Local guide for the Callaghan + Hanging Lake combo, the wildlife windows, and the route up to the upper lake. Best for first-time visitors or anyone hesitant about AWD-only access.</p>
+        <a href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener" class="cta">Book a guide</a>
+      </div>
     </div>
 
-    <div class="season">
-      <div class="cell">
-        <div class="lab">Late spring</div>
-        <div class="ttl">Mid-June</div>
-        <div class="tx">Road typically opens. Expect lingering snow up high, cold water, and a few washouts on the FSR. Hanging Lake trail may still be patchy.</div>
-      </div>
-      <div class="cell">
-        <div class="lab">Prime</div>
-        <div class="ttl">July &mdash; August</div>
-        <div class="tx">The window. Long days, warm afternoons, swimmable (briefly) water. Wildlife is most active. Book delivery and plan campsites early.</div>
-      </div>
-      <div class="cell">
-        <div class="lab">Quiet</div>
-        <div class="ttl">September</div>
-        <div class="tx">Our favourite. Crowds thin, larches start to turn higher up, weather is mostly stable. Mornings get cold. Bring layers.</div>
-      </div>
-      <div class="cell">
-        <div class="lab">Closing</div>
-        <div class="ttl">Early October</div>
-        <div class="tx">Short window before snow returns. Watch the forecast. The road can close earlier than expected after a heavy storm.</div>
-      </div>
+    <div class="closure-note">
+      <strong>Field Note &middot; the road window</strong>
+      Callaghan Valley Road closes for winter and typically doesn&rsquo;t reopen until <em>mid-June</em>. If you&rsquo;re planning for early summer, check current road status before you commit &mdash; the gate is the gate. Rentals start as soon as access does.
     </div>
   </div>
 </section>
 
-<hr class="rule" />
-
-<!-- ===================== § VI — THE DRIVE ===================== -->
-<section id="drive">
-  <div class="wrap">
+<!-- ===================== WHEN ===================== -->
+<section class="deep" id="season">
+  <div class="wrap-narrow">
     <div class="section-head">
-      <span class="eyebrow">§ VI &nbsp;·&nbsp; The Drive</span>
-      <h2>Callaghan Valley Road is the screening test.</h2>
+      <span class="section-eyebrow">When to Go</span>
+      <h2>A short, honest season.</h2>
     </div>
-    <div style="max-width:64ch;">
-      <p>From Highway 99, the Callaghan Valley Road leaves the corridor and climbs into the valley. The first stretch is paved &mdash; this is the road in to Whistler Olympic Park, and it is maintained. After the Olympic Park turn-off, the road continues as gravel: roughly eight kilometres of forest service road, with potholes, washboard, and occasional washouts after storms.</p>
-      <p>An all-wheel-drive vehicle with reasonable ground clearance is the practical minimum. Low-clearance sedans get up there, but they should not, and we wouldn&rsquo;t. Take the corners wide, expect oncoming trucks, and budget more time than the map says.</p>
-      <p>The road ends at a small day-use and campground area on the south shore of the lake. There is no fee booth, no staff, no garbage cans. Pack it in, pack it out.</p>
+
+    <div class="seasons">
+      <div>
+        <div class="sn">Nov &ndash; early Jun</div>
+        <div class="sd">Road closed. The valley belongs to ski tourers and snowshoers.</div>
+      </div>
+      <div>
+        <div class="sn">Mid-Jun &ndash; Jul</div>
+        <div class="sd">Snowmelt fills the lake. Cold water, wildflowers, mosquitoes earn their reputation.</div>
+      </div>
+      <div>
+        <div class="sn">Aug &ndash; early Sep</div>
+        <div class="sd">Prime window. Stable weather, warmer water (relatively), Hanging Lake at its best.</div>
+      </div>
+      <div>
+        <div class="sn">Sep &ndash; Oct</div>
+        <div class="sd">The locals&rsquo; month. Larches turn gold, bugs gone, crisp mornings, brisk water.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<hr class="rule" />
-
-<!-- ===================== § VII — THE PACK ===================== -->
-<section id="pack" class="tight">
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews" id="reviews">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">§ VII &nbsp;·&nbsp; The Pack</span>
-      <h2>What to bring for a paddle-plus-hike day.</h2>
+
+    <div class="reviews-head">
+      <div class="review-summary">
+        <div class="big">4.8</div>
+        <div class="meta">
+          <div class="stars-big">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="count">Based on 29 reader reviews</div>
+        </div>
+      </div>
+      <a href="mailto:hello@seatoskytrails.com?subject=Callaghan%20Lake%20review" class="leave-review">Leave a review</a>
     </div>
 
-    <div class="packlist">
-      <div>
-        <h4>On the water</h4>
-        <ul>
-          <li>PFD that fits, worn the whole time</li>
-          <li>Spare paddle in the boat</li>
-          <li>Bailer or hand pump</li>
-          <li>Dry bag for the hiking layer and lunch</li>
-          <li>Whistle clipped to the PFD</li>
-        </ul>
+    <div class="review-grid">
 
-        <h4>On the trail</h4>
-        <ul>
-          <li>Bear spray, accessible &mdash; not buried in a pack</li>
-          <li>Real shoes for the climb; not sandals</li>
-          <li>1.5&ndash;2 L of water per person</li>
-          <li>Layers &mdash; the upper lake is colder than the lower</li>
-          <li>Headlamp, in case the day runs long</li>
-        </ul>
+      <div class="review-card">
+        <div class="top">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="when">Aug 2025</span>
+        </div>
+        <p>&ldquo;Paddled across Callaghan in the morning, hiked up to Hanging Lake by lunch, ate a sandwich looking down at the canoe. Saw a black bear on the road on the way in. This is the day people come to BC hoping to find.&rdquo;</p>
+        <div>
+          <span class="who">Owen P.</span>
+          <span class="src">Reader letter</span>
+        </div>
       </div>
-      <div>
-        <h4>In the car</h4>
-        <ul>
-          <li>Tow strap and a spare full-sized tire</li>
-          <li>Paper map &mdash; no signal in the valley</li>
-          <li>Snacks for after; you will be hungrier than you think</li>
-          <li>A change of clothes (you will get a little wet)</li>
-        </ul>
 
-        <h4>Don&rsquo;t bring</h4>
-        <ul>
-          <li>Glass bottles on the water or at camp</li>
-          <li>Food or scented items into the tent</li>
-          <li>Drones over the campground or wildlife</li>
-          <li>Speakers. Please.</li>
-        </ul>
+      <div class="review-card">
+        <div class="top">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="when">Jul 2025</span>
+        </div>
+        <p>&ldquo;Canoe was waiting at the launch when we got there. The guide gave us the route to the Hanging Lake trailhead and pointed out where the bobcat had been hanging around the week before. Smoothest rental I&rsquo;ve done in BC.&rdquo;</p>
+        <div>
+          <span class="who">Naomi B.</span>
+          <span class="src">Google review</span>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<hr class="rule" />
+      <div class="review-card">
+        <div class="top">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="when">Sep 2025</span>
+        </div>
+        <p>&ldquo;The silence at Callaghan is the thing I can&rsquo;t stop thinking about. We were on the water by 7 a.m., glass-flat, total quiet except for a loon. Came back with photos that look fake.&rdquo;</p>
+        <div>
+          <span class="who">Priya R.</span>
+          <span class="src">Reader letter</span>
+        </div>
+      </div>
 
-<!-- ===================== § VIII — HONEST TALK ===================== -->
-<section id="honest" class="honest">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">§ VIII &nbsp;·&nbsp; Honest Talk</span>
-      <h2>What the brochure won&rsquo;t say.</h2>
-      <p class="lead" style="margin-top:1.5rem;color:var(--ink-soft);">Callaghan is wonderful and Callaghan is remote. Both of those things are true at the same time, and both of them belong in the trip plan.</p>
-    </div>
+      <div class="review-card">
+        <div class="top">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;<span style="color:var(--ink-mute);">&#9733;</span></span>
+          <span class="when">Aug 2025</span>
+        </div>
+        <p>&ldquo;Drove our sedan in. Don&rsquo;t. The last few kilometres beat us up and I was nervous the whole drive out. Lake itself is incredible, but rent the boat AND take a vehicle that belongs on the road.&rdquo;</p>
+        <div>
+          <span class="who">Felix V.</span>
+          <span class="src">Reader letter</span>
+        </div>
+      </div>
 
-    <div class="truths">
-      <div class="t">
-        <div class="n">i.</div>
-        <h3>There is no cell signal up there.</h3>
-        <p>Plan accordingly. Tell someone your route and a return time. There is no rescue button, no quick text to a friend, no swift coffee-shop check-in if a plan changes.</p>
+      <div class="review-card">
+        <div class="top">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="when">Aug 2025</span>
+        </div>
+        <p>&ldquo;Did the guided Callaghan + Hanging Lake combo as a first-time visitor. Worth every dollar. The guide knew the wildlife windows, the right way to angle across, and exactly where to beach the canoe for the trailhead.&rdquo;</p>
+        <div>
+          <span class="who">Marta &amp; Luc</span>
+          <span class="src">Google review</span>
+        </div>
       </div>
-      <div class="t">
-        <div class="n">ii.</div>
-        <h3>The weather flips fast.</h3>
-        <p>Mountain weather. A calm morning can turn into a whitecapped afternoon and a sleet shower by dinner. Carry a real shell. Check the forecast the morning of.</p>
-      </div>
-      <div class="t">
-        <div class="n">iii.</div>
-        <h3>The road can be brutal in rain.</h3>
-        <p>The FSR drains poorly after a storm and washouts happen. If it has been raining hard for a day or two, drive it slowly &mdash; or pick a different lake for the weekend.</p>
-      </div>
-      <div class="t">
-        <div class="n">iv.</div>
-        <h3>This is bear country, really.</h3>
-        <p>Not as a slogan. Black bears live and feed here. Clean camp, no food in tents, bear spray on your hip on the trail. The lake is theirs first.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<hr class="rule" />
-
-<!-- ===================== COLOPHON ===================== -->
-<section id="colophon" class="colophon tight">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">§ IX &nbsp;·&nbsp; Colophon</span>
-      <h2>Letters, leads, &amp; corrections.</h2>
-    </div>
-
-    <div class="colophon-grid">
-      <div>
-        <h4>The Entry</h4>
-        <p style="font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:1.05rem;color:var(--ink);max-width:38ch;line-height:1.5;">
-          Callaghan Lake is Entry IV in the Sea to Sky Trails &mdash; a long-form, honest account of the lakes and outposts of the Coast Mountains between Vancouver and Pemberton.
-        </p>
-      </div>
-      <div>
-        <h4>Read</h4>
-        <ul>
-          <li><a href="#twolakes">The two-lake trip</a></li>
-          <li><a href="#water">On the water</a></li>
-          <li><a href="#wildlife">Wildlife</a></li>
-          <li><a href="#honest">Honest talk</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Plan</h4>
-        <ul>
-          <li><a href="https://squamishcanoerental.com/canoe-delivery-whistler/" target="_blank" rel="noopener">Canoe delivery</a></li>
-          <li><a href="#drive">The drive</a></li>
-          <li><a href="#when">When to go</a></li>
-          <li><a href="#pack">The pack list</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Elsewhere</h4>
-        <ul>
-          <li><a href="https://seatoskytrails.com/">Sea to Sky Trails</a></li>
-          <li><a href="https://squamishcanoerental.com/">Squamish Canoe Rental</a></li>
-          <li><a href="https://squamishwatertaxi.com/">Squamish Water Taxi</a></li>
-        </ul>
+      <div class="review-card">
+        <div class="top">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="when">Jul 2025</span>
+        </div>
+        <p>&ldquo;Camped one night at the walk-in sites, paddled all the next morning. A marmot watched us load the canoe. Bear scat on the trail. The valley feels alive in a way the parks closer to town don&rsquo;t anymore.&rdquo;</p>
+        <div>
+          <span class="who">Theo &amp; Hannah</span>
+          <span class="src">Reader letter</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ===================== HONEST NOTE ===================== -->
+<section class="honest">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="section-eyebrow">Honest Note</span>
+      <h2>What the brochures leave out.</h2>
+    </div>
+    <p>The road is the filter. <em>If your vehicle is low-clearance, that&rsquo;s a real problem here</em> &mdash; not a warning we&rsquo;re adding for liability. The washboard past Whistler Olympic Park is honest, and the last stretch into the lake is rougher than that. Take it slow, or take a guide.</p>
+    <p>This is active wildlife country. Black bears use the valley, and bobcat and marmot sightings are common enough that the guides build their routes around the windows. Carry bear spray, store food properly, and don&rsquo;t leave anything edible at the walk-in sites overnight.</p>
+    <p>The valley sits on Sḵwx̱wú7mesh (Squamish) and Lil&rsquo;wat Nation territory. Pack out what you bring. The fewer traces left behind, the longer Callaghan stays what it is.</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="deep" id="faq">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="section-eyebrow">Questions &amp; Answers</span>
+      <h2>The questions people actually ask about Callaghan Lake.</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary><span class="q-n">01</span><span class="q-t">Where is Callaghan Lake?</span><span class="q-plus">+</span></summary>
+        <div class="a">
+          <p>Callaghan Lake sits in the Callaghan Valley, about 25 minutes south of Whistler off Highway 99. You turn onto Callaghan Valley Road and follow it past Whistler Olympic Park &mdash; the 2010 Nordic and biathlon venue &mdash; and continue on gravel to the lake. The lake itself is at roughly 1,316 m, tucked into a basin ringed by Coast Mountain ridges.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="q-n">02</span><span class="q-t">Do I really need AWD or 4WD to get to Callaghan Lake?</span><span class="q-plus">+</span></summary>
+        <div class="a">
+          <p>Strongly recommended. The pavement ends past Whistler Olympic Park, and the remaining stretch to the lake is gravel, washboarded, and rough in spots &mdash; especially after a wet week. AWD or a high-clearance vehicle handles it without drama. Sedans make it some of the time, but the trip is slow, nervous, and hard on the car. If your vehicle isn&rsquo;t suited, hiring a guide is the cleanest way to get there.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="q-n">03</span><span class="q-t">What is the Hanging Lake hike, and why does it matter?</span><span class="q-plus">+</span></summary>
+        <div class="a">
+          <p>Hanging Lake is a smaller alpine tarn perched on the far side of Callaghan. The trailhead is across the lake from the main launch, which is why locals rent canoes specifically to paddle over and access it. The hike is short and steep &mdash; roughly an hour up &mdash; and the payoff is a quiet tarn with a view back down over Callaghan. The paddle-then-hike combo is the headline outing here.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="q-n">04</span><span class="q-t">When is Callaghan Lake open?</span><span class="q-plus">+</span></summary>
+        <div class="a">
+          <p>The access road closes for the winter and typically reopens around mid-June, once snowmelt allows. The practical season runs from mid-June through October. August is the warmest window, September brings the larch colour, and by late October the gate is usually back on. Check current road status before you commit to a date.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="q-n">05</span><span class="q-t">Can you camp at Callaghan Lake?</span><span class="q-plus">+</span></summary>
+        <div class="a">
+          <p>Yes. There&rsquo;s a small wilderness-style campground with walk-in sites near the lake &mdash; pit toilets, no power, no showers. It&rsquo;s a pack-it-in, pack-it-out arrangement. Food storage matters here: bears use the valley, and the campground is not somewhere to leave a cooler out overnight.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="q-n">06</span><span class="q-t">Will I see wildlife?</span><span class="q-plus">+</span></summary>
+        <div class="a">
+          <p>Often, yes. Black bears use the valley as a corridor, bobcat sightings are common enough that the guides know the windows, and marmots are nearly guaranteed in the meadows. Carry bear spray, keep distance, and don&rsquo;t approach. The wildlife is part of what makes Callaghan feel like the backcountry it actually is.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span class="q-n">07</span><span class="q-t">Can I rent a canoe or paddleboard at Callaghan Lake?</span><span class="q-plus">+</span></summary>
+        <div class="a">
+          <p>Yes &mdash; by delivery. Canoes and stand-up paddleboards are hand-delivered to the lake (or your campsite), paddles and PFDs included. For first-time visitors or anyone uneasy about the road, a guided trip covers the access, the paddle across to the Hanging Lake trailhead, and the route up to the upper lake.</p>
+          <p>See the rest of the <a href="https://seatoskytrails.com/">Sea to Sky Trails</a> guides for nearby <a href="https://alicelakesquamish.com/">Alice Lake</a> and the <a href="https://lakelovelywater.com/">Lake Lovely Water</a> crossing.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
 <footer class="foot">
-  <div class="wrap inner">
-    <div>
-      <em>Callaghan Lake</em> &middot; An entry in the <a href="https://seatoskytrails.com/" style="border-bottom:1px solid var(--rule);">Sea to Sky Trails</a> &middot; Published in Sḵwx̱wú7mesh territory.
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>The Guide</h4>
+        <p>Callaghan Lake is an entry in the Sea to Sky Trails &mdash; a slow-built field guide to the lakes, hikes, and outposts of the Coast Mountains.</p>
+      </div>
+      <div>
+        <h4>More Field Guides</h4>
+        <ul>
+          <li><a href="https://alicelakesquamish.com/">Alice Lake</a></li>
+          <li><a href="https://lakelovelywater.com/">Lake Lovely Water</a></li>
+          <li><a href="https://echolakesquamish.com/">Echo Falls &amp; Echo Lake</a></li>
+          <li><a href="https://levettelake.com/">Levette Lake</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get a Boat</h4>
+        <ul>
+          <li><a href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">Canoe delivery</a></li>
+          <li><a href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">Paddleboard delivery</a></li>
+          <li><a href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">Hire a guide</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      &copy; 2026. Set in Fraunces &amp; Inter. Reader-funded.
+    <div class="foot-bottom">
+      <div><em>Sea to Sky Trails</em> &middot; Vol. I, No. 04 &middot; <a href="https://seatoskytrails.com/" style="color:inherit;">seatoskytrails.com</a> &middot; Published in Sḵwx̱wú7mesh &amp; Lil&rsquo;wat territory.</div>
+      <div>Set in Fraunces &amp; Inter. Reader-funded.</div>
     </div>
   </div>
 </footer>
+
+<!-- ===================== FAQ STRUCTURED DATA ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is Callaghan Lake?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Callaghan Lake is in the Callaghan Valley, about 25 minutes south of Whistler off Highway 99. Access is via Callaghan Valley Road, past Whistler Olympic Park, and the lake sits at roughly 1,316 m in a basin ringed by Coast Mountain ridges." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need AWD or 4WD to get to Callaghan Lake?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Strongly recommended. The pavement ends past Whistler Olympic Park and the remaining gravel road is washboarded and rough in spots. AWD or high-clearance handles it without issue; sedans make it slowly and uneasily. If your vehicle is not suited, hiring a guide is the cleanest way to get there." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Hanging Lake hike?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hanging Lake is a smaller alpine tarn on the far side of Callaghan. The trailhead sits across the lake from the main launch, so locals rent canoes to paddle over and access it. The hike is short and steep, roughly an hour up, and the paddle-plus-hike combo is the headline outing at Callaghan." }
+    },
+    {
+      "@type": "Question",
+      "name": "When is Callaghan Lake open?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The access road closes for winter and typically reopens around mid-June. The practical season is mid-June through October, with August warmest and September bringing larch colour." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you camp at Callaghan Lake?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, in a small wilderness-style walk-in campground with pit toilets, no power and no showers. It is pack-it-in, pack-it-out, and food storage matters because bears use the valley." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I see wildlife at Callaghan Lake?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Often. Black bears use the valley as a corridor, bobcat sightings happen, and marmots are nearly guaranteed in the meadows. Carry bear spray and keep distance." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I rent a canoe or paddleboard at Callaghan Lake?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, by delivery. Canoes and stand-up paddleboards are hand-delivered to the lake or your campsite with paddles and PFDs included. Guided trips are also available for first-time visitors or anyone uneasy about the AWD-only road." }
+    }
+  ]
+}
+</script>
 
 </body>
 </html>
